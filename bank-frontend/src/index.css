@@ -1,0 +1,84 @@
+
+:root{
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --danger:#dc2626;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:#111827;
+}
+
+/* container */
+.container{
+  max-width:1000px;
+  margin:24px auto;
+  padding:18px;
+}
+
+/* navbar */
+.navbar{
+  background:var(--card);
+  padding:12px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-radius:8px;
+  box-shadow:0 1px 4px rgba(2,6,23,0.06);
+}
+.brand{ font-weight:700; font-size:18px; color:var(--accent) }
+.nav-links{ display:flex; gap:12px; align-items:center; }
+.nav-links a{ text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:6px; }
+.nav-links a.active{ color:#111827; background:#eef2ff; }
+
+/* card */
+.card{
+  background:var(--card);
+  border-radius:10px;
+  padding:16px;
+  box-shadow:0 1px 4px rgba(2,6,23,0.04);
+}
+
+/* form */
+.form-row{ display:flex; flex-direction:column; gap:6px; margin-bottom:12px; }
+.input{
+  padding:10px 12px;
+  border:1px solid #e6e9ef;
+  border-radius:8px;
+  background:transparent;
+  outline:none;
+}
+.btn{
+  padding:10px 14px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  background:var(--accent);
+  color:white;
+  font-weight:600;
+}
+.btn.ghost{ background:transparent; color:var(--accent); border:1px solid #e6e9ef; }
+
+/* lists */
+.account-list{ display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; }
+.account-card{ width:220px; padding:12px; border-radius:8px; background:#fff; box-shadow:0 1px 4px rgba(2,6,23,0.03); }
+.small{ font-size:13px; color:var(--muted) }
+
+/* transactions table */
+.table{ width:100%; border-collapse:collapse; margin-top:12px; }
+.table th, .table td{ text-align:left; padding:10px 8px; border-bottom:1px solid #f1f1f3; }
+.table th{ font-size:13px; color:var(--muted); }
+
+/* footer */
+.footer{
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+  margin-top:18px;
+}

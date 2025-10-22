@@ -9,6 +9,7 @@ import jakarta.ws.rs.core.Response;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 @Path("/customers")
 @Produces(MediaType.APPLICATION_JSON)
@@ -27,6 +28,20 @@ public class CustomerResource {
             return Response.serverError().entity(e.getMessage()).build();
         }
     }
+@GET
+@Path("/by-username/{username}")
+public Response getByUsername(@PathParam("username") String username) {
+    try {
+        Customer customer = dao.findByUsername(username);
+        if (customer == null)
+            return Response.status(Response.Status.NOT_FOUND)
+                    .entity(Map.of("error", "User not found")).build();
+        return Response.ok(customer).build();
+    } catch (SQLException e) {
+        return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
+                .entity(Map.of("error", e.getMessage())).build();
+    }
+}
 
     //  Get by ID
     @GET
@@ -43,7 +58,7 @@ public class CustomerResource {
             return Response.serverError().entity(e.getMessage()).build();
         }
     }
-
+ 
     // Create new customer
     @POST
     public Response create(Customer c) {

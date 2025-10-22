@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0b132b;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-container a {
+  color: white;
+  text-decoration: underline;
+}
+
+.login-container a:hover {
+  color: #00ffff; 
+}
+
+
+.login-container, .dashboard-container {
+  text-align: center;
+  background-color: #1c2541;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #3a506b;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 8px;
+  width: 80%;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #5bc0be;
+  color: #0b132b;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #3a506b;
+  color: white;
+}
+
+.logout {
+  margin-top: 20px;
+  background-color: #ff4b5c;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url("/images/background.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+
+.form-container,
+.dashboard-container,
+.login-container {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 400px;
+  margin: 60px auto;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  background-color: #38d8d3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
